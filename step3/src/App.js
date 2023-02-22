@@ -20,6 +20,9 @@ import Dog from "./Dog";
 // };
 
 const App = () => {
+  // JSX is a special syntax that allows us to write HTML-like syntax
+  // inside of our JavaScript files
+  // all JSX elements will be transpiled to React.createElement calls
   return (
     <div>
       <h1 id="brand">These are my dogs</h1>
