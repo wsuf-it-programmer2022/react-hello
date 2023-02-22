@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- core library of react -->
+    <!-- unpkg is a CDN that is mirroring npm -->
+    <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <!-- react-dom is for the browser-->
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">not rendered</div>
+    <script>
+      // an example of a react component
+      const App = () => {
+        return React.createElement(
+          "div",
+          { id: "brand", className: "header" },
+          React.createElement("h1", {}, "This is react")
+        );
+      };
+      const container = document.querySelector("#root");
+      const root = ReactDOM.createRoot(container);
+      root.render(React.createElement(App));
+      console.log("hello");
+    </script>
+  </body>
+</html>
